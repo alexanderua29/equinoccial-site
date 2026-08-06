@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(claude --version)",
+      "Bash(npm run *)"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "equinoccial-site",
+  "version": "1.0.0",
+  "description": "Sitio web de Equinoccial — Maniobras e Izajes",
+  "private": true,
+  "scripts": {
+    "build": "node build.js",
+    "serve": "npx --yes serve dist"
+  }
+}
