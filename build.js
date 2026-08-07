@@ -16,7 +16,7 @@ const fs = require("fs");
 const path = require("path");
 
 const ROOT = __dirname;
-const DIST = path.join(ROOT, "dist");
+const DIST = path.join(ROOT, "docs");
 
 // Define aquí cada página del sitio: archivo de salida, título y descripción SEO
 const PAGES = [
