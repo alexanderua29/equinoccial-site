@@ -231,7 +231,7 @@
   }
   .checkbox-line{display:flex;align-items:flex-start;gap:8px;font-size:12px;color:var(--light-gray);}
   .checkbox-line a{color:var(--gold);}
-  .checkbox-line input{width:auto;margin-top:2px;}
+  .checkbox-line input{width:auto !important;margin-top:2px;}
 
   /* Footer expandido */
   .footer-main{
