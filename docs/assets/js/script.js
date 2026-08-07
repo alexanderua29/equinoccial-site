@@ -76,16 +76,24 @@
         statusMsg.textContent = '¡Solicitud enviada! Te contactaremos pronto.';
         form.reset();
 
-        var texto = "🏗️ *Nueva solicitud de cotización*%0A" +
-  "_Equinoccial – Maniobras e Izajes_%0A%0A" +
-  "👤 *Nombre:* " + nombre + "%0A" +
-  (empresa ? "🏢 *Empresa:* " + empresa + "%0A" : "") +
-  "📞 *Teléfono:* " + telefono + "%0A" +
-  "✉️ *Correo:* " + email + "%0A" +
-  (sector && sector !== "Selecciona un sector" ? "⚙️ *Sector:* " + sector + "%0A" : "") +
-  (servicio && servicio !== "Selecciona un servicio" ? "🚛 *Servicio:* " + servicio + "%0A" : "") +
-  (mensaje ? "%0A📝 *Detalle:*%0A" + mensaje : "");
+var e1 = "\u{1F3D7}\uFE0F"; // 🏗️
+var e2 = "\u{1F464}"; // 👤
+var e3 = "\u{1F3E2}"; // 🏢
+var e4 = "\u{1F4DE}"; // 📞
+var e5 = "\u{2709}\uFE0F"; // ✉️
+var e6 = "\u{2699}\uFE0F"; // ⚙️
+var e7 = "\u{1F69B}"; // 🚛
+var e8 = "\u{1F4DD}"; // 📝
 
+var texto = e1 + " *Nueva solicitud de cotización*%0A" +
+  "_Equinoccial – Maniobras e Izajes_%0A%0A" +
+  e2 + " *Nombre:* " + nombre + "%0A" +
+  (empresa ? e3 + " *Empresa:* " + empresa + "%0A" : "") +
+  e4 + " *Teléfono:* " + telefono + "%0A" +
+  e5 + " *Correo:* " + email + "%0A" +
+  (sector && sector !== "Selecciona un sector" ? e6 + " *Sector:* " + sector + "%0A" : "") +
+  (servicio && servicio !== "Selecciona un servicio" ? e7 + " *Servicio:* " + servicio + "%0A" : "") +
+  (mensaje ? "%0A" + e8 + " *Detalle:*%0A" + mensaje : "");
         window.open("https://wa.me/" + WHATSAPP_NUMBER + "?text=" + texto, "_blank");
       } else {
         statusMsg.style.color = '#e74c3c';
