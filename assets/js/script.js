@@ -76,14 +76,15 @@
         statusMsg.textContent = '¡Solicitud enviada! Te contactaremos pronto.';
         form.reset();
 
-        var texto = "Hola, quiero solicitar una cotización:%0A" +
-          "Nombre: " + nombre + "%0A" +
-          "Empresa: " + empresa + "%0A" +
-          "Teléfono: " + telefono + "%0A" +
-          "Correo: " + email + "%0A" +
-          "Sector: " + sector + "%0A" +
-          "Servicio: " + servicio + "%0A" +
-          "Detalle: " + mensaje;
+        var texto = "🏗️ *Nueva solicitud de cotización*%0A" +
+  "_Equinoccial – Maniobras e Izajes_%0A%0A" +
+  "👤 *Nombre:* " + nombre + "%0A" +
+  (empresa ? "🏢 *Empresa:* " + empresa + "%0A" : "") +
+  "📞 *Teléfono:* " + telefono + "%0A" +
+  "✉️ *Correo:* " + email + "%0A" +
+  (sector && sector !== "Selecciona un sector" ? "⚙️ *Sector:* " + sector + "%0A" : "") +
+  (servicio && servicio !== "Selecciona un servicio" ? "🚛 *Servicio:* " + servicio + "%0A" : "") +
+  (mensaje ? "%0A📝 *Detalle:*%0A" + mensaje : "");
 
         window.open("https://wa.me/" + WHATSAPP_NUMBER + "?text=" + texto, "_blank");
       } else {
