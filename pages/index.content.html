@@ -238,56 +238,59 @@
         <a href="https://www.tiktok.com/@gruas.equinoccial?_r=1&_t=ZS-98e51o8S180" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M14.5 2h3c.2 1.7 1.2 3.2 2.7 4v3c-1.4 0-2.7-.4-3.8-1.2v6.7a5.9 5.9 0 11-6-5.9c.3 0 .6 0 .9.06v3.1a2.8 2.8 0 00-.9-.15 2.9 2.9 0 102.9 2.9V2z"/></svg></a>
       </div>
     </div>
-    <form class="quote-form">
-      <div>
-        <label for="q-nombre">Nombre completo</label>
-        <input id="q-nombre" type="text" placeholder="Nombre y apellido">
-      </div>
-      <div>
-        <label for="q-empresa">Empresa</label>
-        <input id="q-empresa" type="text" placeholder="Nombre de la empresa">
-      </div>
-      <div>
-        <label for="q-telefono">Teléfono</label>
-        <input id="q-telefono" type="tel" placeholder="09XXXXXXXX">
-      </div>
-      <div>
-        <label for="q-email">Correo electrónico</label>
-        <input id="q-email" type="email" placeholder="correo@empresa.com">
-      </div>
-      <div>
-        <label for="q-sector">Sector</label>
-        <select id="q-sector">
-          <option>Selecciona un sector</option>
-          <option>Minero</option>
-          <option>Eléctrico</option>
-          <option>Petrolero</option>
-          <option>Construcción industrial</option>
-          <option>Otro</option>
-        </select>
-      </div>
-      <div>
-        <label for="q-servicio">Servicio</label>
-        <select id="q-servicio">
-          <option>Selecciona un servicio</option>
-          <option>Grúas telescópicas</option>
-          <option>Camiones grúa</option>
-          <option>Izajes industriales</option>
-          <option>Rescate pesado 24/7</option>
-          <option>Transporte de carga</option>
-        </select>
-      </div>
-      <div class="full">
-        <label for="q-mensaje">Detalle del proyecto</label>
-        <textarea id="q-mensaje" placeholder="Describe la carga, dimensiones, fecha y lugar del proyecto"></textarea>
-      </div>
-      <div class="full checkbox-line">
-        <input type="checkbox" id="q-privacidad">
-        <label for="q-privacidad" style="margin:0;">Acepto la <a href="privacidad.html">Política de Privacidad</a> y el tratamiento de mis datos personales.</label>
-      </div>
-      <div class="full">
-        <button type="submit" class="btn-primary" style="border:none;cursor:pointer;">Enviar solicitud</button>
-      </div>
-    </form>
+    <form class="quote-form" id="quote-form">
+  <input type="hidden" name="access_key" value="24980a87-1d24-480f-9c37-4ec793a7c804">
+  <input type="hidden" name="subject" value="Nueva solicitud de cotización - Equinoccial">
+  <div>
+    <label for="q-nombre">Nombre completo</label>
+    <input id="q-nombre" name="name" type="text" placeholder="Nombre y apellido" required>
+  </div>
+  <div>
+    <label for="q-empresa">Empresa</label>
+    <input id="q-empresa" name="company" type="text" placeholder="Nombre de la empresa">
+  </div>
+  <div>
+    <label for="q-telefono">Teléfono</label>
+    <input id="q-telefono" name="phone" type="tel" placeholder="09XXXXXXXX" required>
+  </div>
+  <div>
+    <label for="q-email">Correo electrónico</label>
+    <input id="q-email" name="email" type="email" placeholder="correo@empresa.com" required>
+  </div>
+  <div>
+    <label for="q-sector">Sector</label>
+    <select id="q-sector" name="sector">
+      <option>Selecciona un sector</option>
+      <option>Minero</option>
+      <option>Eléctrico</option>
+      <option>Petrolero</option>
+      <option>Construcción industrial</option>
+      <option>Otro</option>
+    </select>
+  </div>
+  <div>
+    <label for="q-servicio">Servicio</label>
+    <select id="q-servicio" name="service">
+      <option>Selecciona un servicio</option>
+      <option>Grúas telescópicas</option>
+      <option>Camiones grúa</option>
+      <option>Izajes industriales</option>
+      <option>Rescate pesado 24/7</option>
+      <option>Transporte de carga</option>
+    </select>
+  </div>
+  <div class="full">
+    <label for="q-mensaje">Detalle del proyecto</label>
+    <textarea id="q-mensaje" name="message" placeholder="Describe la carga, dimensiones, fecha y lugar del proyecto"></textarea>
+  </div>
+  <div class="full checkbox-line">
+    <input type="checkbox" id="q-privacidad">
+    <label for="q-privacidad" style="margin:0;">Acepto la <a href="privacidad.html">Política de Privacidad</a> y el tratamiento de mis datos personales.</label>
+  </div>
+  <div class="full">
+    <button type="submit" class="btn-primary" style="border:none;cursor:pointer;">Enviar solicitud</button>
+  </div>
+  <p class="full" id="quote-form-status" style="display:none;margin-top:10px;font-size:14px;"></p>
+</form>
   </div>
 </section>
