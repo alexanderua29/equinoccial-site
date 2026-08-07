@@ -106,3 +106,29 @@ var texto = e1 + " *Nueva solicitud de cotización*%0A" +
     });
   });
 })();
+// Reproducir el video del hero al primer toque/scroll (para modo ahorro de batería en iOS)
+(function(){
+  var heroVideo = document.querySelector('.hero-video');
+  if(!heroVideo) return;
+
+  function tryPlayVideo(){
+    heroVideo.play().catch(function(){});
+  }
+
+  // Intenta reproducir apenas carga la página
+  tryPlayVideo();
+
+  // Si sigue pausado, lo intenta de nuevo en la primera interacción del usuario
+  var events = ['touchstart', 'scroll', 'click'];
+  function onFirstInteraction(){
+    if(heroVideo.paused){
+      tryPlayVideo();
+    }
+    events.forEach(function(evt){
+      window.removeEventListener(evt, onFirstInteraction);
+    });
+  }
+  events.forEach(function(evt){
+    window.addEventListener(evt, onFirstInteraction, { once: false, passive: true });
+  });
+})();
